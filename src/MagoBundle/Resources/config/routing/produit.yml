@@ -1,0 +1,24 @@
+produit_index:
+    path:     /Produit
+    defaults: { _controller: "MagoBundle:Produit:index" }
+    methods:  GET
+
+produit_show:
+    path:     /Produit/{id}/show
+    defaults: { _controller: "MagoBundle:Produit:show" }
+    methods:  GET
+
+produit_new:
+    path:     /Produit/new
+    defaults: { _controller: "MagoBundle:Produit:new" }
+    methods:  [GET, POST]
+
+produit_edit:
+    path:     /Produit/{id}/edit
+    defaults: { _controller: "MagoBundle:Produit:edit" }
+    methods:  [GET, POST]
+
+produit_delete:
+    path:     /Produit/{id}/delete
+    defaults: { _controller: "MagoBundle:Produit:delete" }
+    methods:  DELETE

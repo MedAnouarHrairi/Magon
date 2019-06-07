@@ -1,0 +1,21 @@
+{% extends 'Layout.html.twig' %}
+{% block body %}
+<main>
+    <div class="page-loader">
+        <div class="loader">Loading...</div>
+    </div>
+    <section class="home-section home-parallax home-fade home-full-height bg-dark bg-dark-30" id="home" data-background="{{ asset('bundles/soon.jpg') }}">
+        <div class="titan-caption">
+            <div class="caption-content">
+                <div class="font-alt mb-30 titan-title-size-4">OUR FARM,YOUR'S!</div>
+                <div class="font-alt">coming soon to boost your experience!<br/>the first VR app in Tunisia!
+                </div>
+                <div class="font-alt mt-30"><a class="btn btn-border-w btn-round" href="{{  path("offre_index") }}">Back to home page</a></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+{% endblock %}

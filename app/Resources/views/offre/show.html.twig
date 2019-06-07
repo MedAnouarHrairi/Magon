@@ -1,0 +1,61 @@
+{% extends 'Layout.html.twig' %}
+{% block script %}
+    <link href="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"/>
+    <script src="{{ asset('bundles/js/jquery.vmap.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/js/maps/jquery.vmap.tunisia.min.js') }}" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            jQuery('#jqvmap').vectorMap({ map: 'tn_regions_fr',selectedRegion: "{{ offre.gouv }}" });
+        });
+    </script>
+{% endblock %}
+{% block body %}
+    <div class="main">
+        <section class="module bg-dark-60 portfolio-page-header" data-background="{{ asset('bundles/index4.png') }}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <h2 class="module-title font-alt">Offer Detail</h2>
+                        <div class="module-subtitle font-serif">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="module">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-8 col-lg-8">
+                        {% if offre.produit.nom == 'pomme' %}<img src="{{ asset('bundles/pommes.jpg') }}" alt="Title of Image"/>{% endif %}
+                        {% if offre.produit.nom == 'pomme de terre' %}<img src="{{ asset('bundles/pommeDeTerre.jpg') }}" alt="Title of Image"/>{% endif %}
+                        {% if offre.produit.nom == 'fraise' %}<img src="{{ asset('bundles/fraise.jpg') }}" alt="Title of Image"/>{% endif %}
+                        {% if offre.produit.nom == 'piment' %}<img src="{{ asset('bundles/piment.jpg') }}" alt="Title of Image"/>{% endif %}
+                        {% if offre.produit.nom == 'tommate' %}<img src="{{ asset('bundles/tomato.jpg') }}" alt="Title of Image"/>{% endif %}
+                        {% if offre.produit.nom == 'peche' %}<img src="{{ asset('bundles/peche.jpg') }}" alt="Title of Image"/>{% endif %}
+                        {% if offre.produit.nom == 'orange' %}<img src="{{ asset('bundles/orange.jpg') }}" alt="Title of Image"/>{% endif %}
+                        {% if offre.produit.nom == 'olive' %}<img src="{{ asset('bundles/olive.jpg') }}" alt="Title of Image"/>{% endif %}
+                        {% if offre.produit.nom == 'dattes' %}<img src="{{ asset('bundles/datte.jpg') }}" alt="Title of Image"/>{% endif %}
+                        {% if offre.produit.nom == 'raisin' %}<img src="{{ asset('bundles/raisin.jpg') }}" alt="Title of Image"/>{% endif %}
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <div class="work-details">
+                            <ul>
+                                <li><strong>Client: </strong><span class="font-serif"><a href="#" target="_blank">{{ offre.agriculteur.prenom }}  {{ offre.agriculteur.nom }}</a></span>
+                                </li>
+                                <li><strong>Date: </strong><span class="font-serif"><a href="#" target="_blank">{{ offre.dateOffre|date("l m-Y")  }}</a></span>
+                                </li>
+                                <li><strong>Quantity: </strong><span class="font-serif"><a href="#" target="_blank">{{ offre.quantity }} KGs</a></span>
+                                </li>
+
+                            </ul>
+                            <div id="jqvmap" style="width:400px;height:250px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </div>
+{% endblock %}

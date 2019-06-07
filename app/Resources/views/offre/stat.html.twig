@@ -1,0 +1,64 @@
+{% extends 'Layout.html.twig' %}
+
+{% block body %}
+    <div class="main">
+        <section class="module bg-dark-60 faq-page-header" data-background="{{ asset('bundles/index4.png') }}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <h2 class="module-title font-alt">Stats</h2>
+                        <div class="module-subtitle font-serif">Anyone who can do solid statistical programming will never miss a meal.</div>
+                </div>
+            </div>
+        </section>
+        <section class="module">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9 col-sm-offset-2">
+                        <div role="tabpanel">
+                            <ul class="nav nav-tabs font-alt" role="tablist">
+                                <li class="active"><a href="#support" data-toggle="tab"><span class="icon-tools-2"></span>Offers</a></li>
+                                <li><a href="#sales" data-toggle="tab"><span class="icon-tools-2"></span>sales</a></li>
+                                <li><a href="#stock" data-toggle="tab"><span class="icon-tools-3"></span>stock</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="support">
+                                    <div class="panel-group" id="accordion">
+                                        <div class="panel panel-default">
+                                            <div class="panel-collapse collapse in" id="support1">
+                                                <div class="panel-body" style="padding: 0px">
+                                                    <iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiOGZmOTE4MDUtNjM3ZS00YmQyLTg0OWUtNzA2NWE4NDRlNWUyIiwidCI6ImYwNjA4MDQxLTU1ZGMtNDJjNS1iY2FkLTUzNjIzZTFhY2FlNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="sales">
+                                    <div class="panel-group" id="accordion">
+                                        <div class="panel panel-default">
+                                            <div class="panel-collapse collapse in" id="sales1">
+                                                <div class="panel-body">
+                                                    <iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiOWQ5ZWM0OTctOTEzMi00NjEyLTg2MGItZDA5ODM0ODVlMjA0IiwidCI6ImYwNjA4MDQxLTU1ZGMtNDJjNS1iY2FkLTUzNjIzZTFhY2FlNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane active" id="stock">
+                                    <div class="panel-group" id="accordion">
+                                        <div class="panel panel-default">
+                                            <div class="panel-collapse collapse in" id="stock">
+                                                <div class="panel-body" style="padding: 0px">
+                                                    <iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiN2FlNzMxYTItODJjYS00ZjgxLWExYjUtNmFhYzIwZDJmMDY2IiwidCI6ImYwNjA4MDQxLTU1ZGMtNDJjNS1iY2FkLTUzNjIzZTFhY2FlNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

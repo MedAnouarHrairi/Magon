@@ -1,0 +1,7 @@
+mago:
+    resource: "@MagoBundle/Resources/config/routing/*.yml"
+    prefix:   /
+
+mago_homepage:
+    path:     /
+    defaults: { _controller: MagoBundle:Offre:index }

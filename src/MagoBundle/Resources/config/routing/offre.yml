@@ -1,0 +1,34 @@
+offre_index:
+    path:     /Offre
+    defaults: { _controller: "MagoBundle:Offre:index" }
+    methods:  GET
+
+offre_show:
+    path:     /Offre/{id}/show
+    defaults: { _controller: "MagoBundle:Offre:show" }
+    methods:  GET
+
+offre_new:
+    path:     /Offre/new
+    defaults: { _controller: "MagoBundle:Offre:new" }
+    methods:  [GET, POST]
+
+offre_edit:
+    path:     /Offre/{id}/edit
+    defaults: { _controller: "MagoBundle:Offre:edit" }
+    methods:  [GET, POST]
+
+offre_delete:
+    path:     /Offre/{id}/delete
+    defaults: { _controller: "MagoBundle:Offre:delete" }
+    methods:  DELETE
+
+offre_stat:
+    path:     /Offre/stat
+    defaults: { _controller: "MagoBundle:Offre:stat" }
+    methods:  GET
+
+offre_soon:
+    path:     /Offre/soon
+    defaults: { _controller: "MagoBundle:Offre:soon" }
+    methods:  GET

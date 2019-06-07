@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Agriculteurs list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for agriculteur in agriculteurs %}
+            <tr>
+                <td><a href="{{ path('_show', { 'id': agriculteur.id }) }}">{{ agriculteur.id }}</a></td>
+                <td>{{ agriculteur.nom }}</td>
+                <td>{{ agriculteur.prenom }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('_show', { 'id': agriculteur.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('_edit', { 'id': agriculteur.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('_new') }}">Create a new agriculteur</a>
+        </li>
+    </ul>
+{% endblock %}

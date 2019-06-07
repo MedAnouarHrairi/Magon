@@ -1,0 +1,46 @@
+{% extends 'Layout.html.twig' %}
+
+
+{% block body %}
+    <section class="bg-dark-30 showcase-page-header module parallax-bg" data-background="{{ asset('bundles/index3.jpg') }}" >
+        <div class="titan-caption">
+            <div class="caption-content">
+                <div class="font-alt mb-40 titan-title-size-4">100+ Offers</div><a class="section-scroll btn btn-border-w btn-round" href="{{  path("offre_index") }}">Command now</a>
+            </div>
+        </div>
+    </section>
+
+    <section  class="module">
+
+            <ul class="works-grid works-grid-gut works-grid-3 works-hover-w" id="works-grid">
+                {% for offre in offres %}
+                <li class="work-item illustration webdesign">
+
+                    <a href="{{  path("offre_show", { 'id': offre.id }) }}">
+
+                        <div class="work-image">
+                        {% if offre.produit.nom == 'pomme' %}<img src="{{ asset('bundles/pommes.jpg') }}" alt="Portfolio Item"/></div>{% endif %}
+                        {% if offre.produit.nom == 'piment' %}<img src="{{ asset('bundles/piment.jpg') }}" alt="Portfolio Item"/></div>{% endif %}
+                        {% if offre.produit.nom == 'pomme de terre' %}<img src="{{ asset('bundles/pommeDeTerre.jpg') }}" alt="Portfolio Item"/></div>{% endif %}
+                        {% if offre.produit.nom == 'tommate' %}<img src="{{ asset('bundles/tomato.jpg') }}" alt="Portfolio Item"/></div>{% endif %}
+                        {% if offre.produit.nom == 'fraise' %}<img src="{{ asset('bundles/fraise.jpg') }}" alt="Portfolio Item"/></div>{% endif %}
+                        {% if offre.produit.nom == 'peche' %}<img src="{{ asset('bundles/peche.jpg') }}" alt="Portfolio Item"/></div>{% endif %}
+                        {% if offre.produit.nom == 'dattes' %}<img src="{{ asset('bundles/datte.jpg') }}" alt="Portfolio Item"/></div>{% endif %}
+                        {% if offre.produit.nom == 'olive' %}<img src="{{ asset('bundles/olive.jpg') }}" alt="Portfolio Item"/></div>{% endif %}
+                        {% if offre.produit.nom == 'orange' %}<img src="{{ asset('bundles/orange.jpg') }}" alt="Portfolio Item"/></div>{% endif %}
+                        {% if offre.produit.nom == 'raisin' %}<img src="{{ asset('bundles/raisin.jpg') }}" alt="Portfolio Item"/></div>{% endif %}
+                        <div class="work-caption font-alt">
+                            <h3 class="work-title">{{ offre.agriculteur.prenom }}  {{ offre.agriculteur.nom }}</h3>
+                            <div class="work-title" >{{ offre.quantity }} KG</div>
+
+                        </div>
+                    </a>
+
+                </li>
+                {% endfor %}
+            </ul>
+
+    </section>
+
+
+{% endblock %}
